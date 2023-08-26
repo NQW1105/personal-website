@@ -14,7 +14,7 @@ const ProjectInfo = () => {
         href="https://e-commerce-7887d.web.app/"
         target="_blank"
         rel="noopener noreferrer"
-        className="project-link"
+        className="project-img-link"
       >
         <img src={projectImg} alt="" className="project-img" />
       </a>

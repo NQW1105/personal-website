@@ -383,6 +383,10 @@ h6 {
   color: #147efb;
   transition: all 0.3s;
 }
+.project-img-link {
+  @extend .project-link;
+  margin: 0;
+}
 
 // Contact Me Section
 #contact-container {
