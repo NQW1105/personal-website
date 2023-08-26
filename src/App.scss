@@ -287,37 +287,31 @@ h6 {
     text-align: justify;
   }
 }
+
 .stack-container {
-  // width: 60%;
-  // margin: 0 auto;
   overflow: hidden;
   position: relative;
 
   .stack-slider {
     display: flex;
-    gap: 0.8rem;
-    animation: slide 20s linear infinite;
 
     .language-list {
       display: flex;
       padding: 0;
-      gap: 0.8rem;
+      animation: slide 35s linear infinite;
 
       .language {
         list-style-type: none;
         font-size: 3rem;
-        // border-radius: 50%;
-        // background-color: beige;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0 11px;
       }
     }
   }
 }
-.stack-slider:hover {
-  animation-play-state: paused;
-}
+
 .stack-container::before,
 .stack-container::after {
   position: absolute;
@@ -383,6 +377,7 @@ h6 {
   font-size: 1.1rem;
   color: #000;
   text-decoration: none;
+  margin: 0 0.8rem;
 }
 .project-link:hover {
   color: #147efb;

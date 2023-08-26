@@ -1,6 +1,5 @@
 // TO DO LIST :
 // Find cleaner method to iterate the codes
-// Fix bug (Frame skipping)
 
 const TechStacks = () => {
   const languages = [
@@ -35,13 +34,13 @@ const TechStacks = () => {
             </li>
           ))}
         </ul>
-        <ul className="language-list">
+        {/* <ul className="language-list">
           {languages.map((language) => (
             <li key={language} className="language">
               <i className={language}></i>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </aside>
   );
