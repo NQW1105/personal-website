@@ -2,6 +2,7 @@
 
 // TO DO
 // Consider use JS package for typewriter effect
+import Typewriter from 'typewriter-effect';
 
 const Hero = () => {
   const loadResume = () => {
@@ -16,8 +17,15 @@ const Hero = () => {
       </h1>
       <h1 className="intro">
         I&apos;m
-        <span id="name">Keith</span>
-        <span id="job">An Engineer</span>
+        <Typewriter
+          options={{
+            strings: ['Keith', 'An Engineer'],
+            autoStart: true,
+            loop: true,
+          }}
+        />
+        {/* <span id="name">Keith</span> */}
+        {/* <span id="job">An Engineer</span> */}
       </h1>
       <aside className="social-container">
         <a
