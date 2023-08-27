@@ -1,12 +1,16 @@
 import ReactLogo from '../assets/react.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { throttle } from 'lodash';
 
 // TODO LIST
-// Highlight when selected (react-router etc)
 // Include brand logo
 
 const Navbar = () => {
   const [toggleStatus, setToggleStatus] = useState('');
+
+  const toggleNav = () => {
+    !toggleStatus ? setToggleStatus('active') : setToggleStatus('');
+  };
 
   const scrollTop = () => {
     // For Safari
@@ -15,10 +19,35 @@ const Navbar = () => {
     document.documentElement.scrollTop = 0;
   };
 
-  const toggleNav = () => {
-    // console.log(!toggleStatus);
-    !toggleStatus ? setToggleStatus('active') : setToggleStatus('');
-  };
+  function handleScroll() {
+    const navbarHeight = document.querySelector('header').offsetHeight;
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    let currentSection = '';
+    sections.forEach((section) => {
+      if (window.scrollY >= section.offsetTop - navbarHeight * 1.5) {
+        currentSection = section.id;
+      }
+    });
+
+    navLinks.forEach((link) => {
+      const pathName = link.getAttribute('href').slice(1);
+      if (link.classList.contains('active')) {
+        link.classList.remove('active');
+      }
+      if (currentSection.includes(pathName)) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', throttle(handleScroll), 250);
+    return () => {
+      window.removeEventListener('scroll', throttle(handleScroll), 250);
+    };
+  }, []);
 
   return (
     <header className="navbar">

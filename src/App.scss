@@ -147,12 +147,18 @@ h6 {
       // .selected {
       //   color: $text-color;
       // }
+
+      a:hover,
+      a.active {
+        color: $text-color;
+        transition: 0.5ms;
+      }
     }
 
     .section-link {
       text-decoration: none;
       margin: 0 1rem;
-      color: $text-color;
+      color: $secondary-text-color;
       // color: $unselected-navbar-text-color;
       font-size: 1rem;
       font-weight: 600;
@@ -230,12 +236,13 @@ h6 {
 // About Me Section
 #about-container {
   padding: 0 15px;
-  margin-bottom: 3.5rem;
+  // margin-bottom: 3.5rem;
 
   #about {
     position: relative;
     text-align: center;
-    margin: 4rem 0;
+    padding-top: 3rem;
+    margin-bottom: 4rem;
   }
   #about::after {
     content: '';
@@ -298,12 +305,13 @@ h6 {
 // Projects Section
 #projects-container {
   padding: 0 15px;
-  margin-bottom: 3.5rem;
+  // margin-bottom: 3.5rem;
 
   #projects {
     position: relative;
     text-align: center;
-    margin: 4rem 0;
+    padding-top: 3rem;
+    margin-bottom: 4rem;
   }
   #projects::after {
     content: '';
@@ -364,7 +372,8 @@ h6 {
   #contact {
     position: relative;
     text-align: center;
-    margin: 4rem 0;
+    padding-top: 3rem;
+    margin-bottom: 4rem;
   }
   #contact::after {
     content: '';
