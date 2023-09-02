@@ -1,4 +1,4 @@
-import './App.scss';
+import './scss/App.scss';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
@@ -15,8 +15,8 @@ function App() {
         <Projects />
         <Contact />
       </main>
-      <footer id="footer-container">
-        <p className="footer-text">2023 @ Developed by KeithNQW</p>
+      <footer>
+        <p>2023 @ Developed by KeithNQW</p>
       </footer>
     </>
   );

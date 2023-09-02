@@ -17,15 +17,16 @@ const Hero = () => {
       </h1>
       <h1 className="intro">
         I&apos;m
-        <Typewriter
-          options={{
-            strings: ['Keith', 'An Engineer'],
-            autoStart: true,
-            loop: true,
-          }}
-        />
-        {/* <span id="name">Keith</span> */}
-        {/* <span id="job">An Engineer</span> */}
+        <span className="typewriter">
+          <Typewriter
+            options={{
+              strings: ['Keith', 'An Engineer'],
+              autoStart: true,
+              loop: true,
+              pauseFor: 3000,
+            }}
+          />
+        </span>
       </h1>
       <aside className="social-container">
         <a

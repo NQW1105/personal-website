@@ -1,0 +1,119 @@
+#projects-container {
+  padding: 0 15px;
+  width: 85%;
+  margin: 0 auto;
+
+  @include md {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  @include lg {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  #projects {
+    position: relative;
+    text-align: center;
+    padding-top: 3rem;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $heading-line;
+      width: 115px;
+      height: 2px;
+      left: 50%;
+      bottom: -16px;
+      transform: translateX(-50%);
+    }
+  }
+
+  .project-card {
+    text-align: center;
+
+    @include lg {
+      display: grid;
+      grid-template-columns: 2fr 0.6fr 0.6fr;
+      grid-template-rows: min-content min-content 1fr;
+      column-gap: 50px;
+    }
+
+    .project-img-link {
+      .project-img {
+        width: 100%;
+        border-radius: 0.5rem;
+        box-shadow: $img-shadow;
+      }
+
+      @include lg {
+        grid-column: 1/2;
+        grid-row: 1/4;
+      }
+    }
+
+    .project-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      color: $nav-text;
+      font-size: 1.5rem;
+
+      @include lg {
+        grid-column: 2/4;
+        grid-row: 1/2;
+      }
+
+      .project-icon {
+        height: 1.2rem;
+      }
+    }
+
+    p {
+      text-align: justify;
+      color: $text-color;
+      margin-top: 0;
+
+      @include lg {
+        grid-column: 2/4;
+        grid-row: 2/3;
+      }
+    }
+
+    .project-link {
+      font-size: 1.1rem;
+      color: $white;
+      text-decoration: none;
+      margin: 0 0.8rem;
+      padding: 6px 10px;
+      border: 2px solid $nav-text;
+      background-color: $nav-text;
+
+      &:hover {
+        color: $nav-text;
+        background-color: $white;
+        transition: all 0.5s;
+      }
+
+      @include lg {
+        margin: 0;
+
+        &.github {
+          justify-self: end;
+          margin-top: 15px;
+          height: min-content;
+        }
+
+        &.demo {
+          justify-self: start;
+          margin-top: 15px;
+          height: min-content;
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,10 @@
-import ReactLogo from '../assets/react.svg';
+// import ReactLogo from '../assets/react.svg';
 import { useState, useEffect } from 'react';
 import { throttle } from 'lodash';
 
 // TODO LIST
 // Include brand logo
+// Transparent before scroll
 
 const Navbar = () => {
   const [toggleStatus, setToggleStatus] = useState('');
@@ -33,11 +34,11 @@ const Navbar = () => {
 
     navLinks.forEach((link) => {
       const pathName = link.getAttribute('href').slice(1);
-      if (link.classList.contains('active')) {
-        link.classList.remove('active');
+      if (link.classList.contains('selected')) {
+        link.classList.remove('selected');
       }
       if (currentSection.includes(pathName)) {
-        link.classList.add('active');
+        link.classList.add('selected');
       }
     });
   }
@@ -50,39 +51,38 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="navbar">
-      <div>
-        <img
-          src={ReactLogo}
-          alt="brand-logo"
-          className="logo"
-          onClick={scrollTop}
-        />
-        <a className="toggle-btn" onClick={toggleNav}>
-          <span className="toggle-bar"></span>
-          <span className="toggle-bar"></span>
-          <span className="toggle-bar"></span>
-        </a>
+    <header>
+      <div className="navbar">
+        <div>
+          <span className="logo" onClick={scrollTop}>
+            KeithNQW
+          </span>
+          <a className="toggle-btn" onClick={toggleNav}>
+            <span className="toggle-bar"></span>
+            <span className="toggle-bar"></span>
+            <span className="toggle-bar"></span>
+          </a>
+        </div>
+        <nav className={toggleStatus}>
+          <ul className="nav-links">
+            <li>
+              <a href="#about" className="section-link">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#projects" className="section-link">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="section-link">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav className={toggleStatus}>
-        <ul className="nav-links">
-          <li>
-            <a href="#about" className="section-link">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#projects" className="section-link">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="section-link">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
     </header>
   );
 };
