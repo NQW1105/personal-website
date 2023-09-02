@@ -2,7 +2,7 @@
   text-align: center;
   padding: 8.5rem 0 8.5rem 0;
   color: $white;
-  background-image: url('../src/assets/large-hero.jpg');
+  background-image: url('../assets/large-hero.jpg');
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -17,7 +17,7 @@
   }
 
   &::after {
-    background-image: url('../src/assets/bottom-color.png');
+    background-image: url('../assets/bottom-color.png');
     background-size: 100% 100%;
     position: absolute;
     content: '';
