@@ -1,8 +1,9 @@
 import Typewriter from 'typewriter-effect';
+import Resume from '../assets/NQW_Resume.pdf';
 
 const Hero = () => {
   const loadResume = () => {
-    window.open('./src/assets/NQW_Resume.pdf', '_blank');
+    window.open(Resume, '_blank');
   };
 
   return (
@@ -26,7 +27,7 @@ const Hero = () => {
       </h1>
       <aside className="social-container">
         <a
-          href="https://github.com/"
+          href="https://github.com/NQW1105"
           target="_blank"
           rel="noopener noreferrer"
           className="social-link"
@@ -34,7 +35,7 @@ const Hero = () => {
           <i className="fa-brands fa-github"></i>
         </a>
         <a
-          href="https://www.linkedin.com/"
+          href="https://www.linkedin.com/in/keithnqw"
           target="_blank"
           rel="noopener noreferrer"
           className="social-link"
@@ -48,6 +49,14 @@ const Hero = () => {
       <button className="btn" onClick={loadResume}>
         My Resume
       </button>
+      {/* <a
+        href="../assets/NQW_Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn"
+      >
+        My Resume
+      </a> */}
     </section>
   );
 };
