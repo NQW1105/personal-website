@@ -1,9 +1,7 @@
-// import ReactLogo from '../assets/react.svg';
 import { useState, useEffect } from 'react';
 import { throttle } from 'lodash';
 
 // TODO LIST
-// Include brand logo
 // Transparent before scroll
 
 const Navbar = () => {

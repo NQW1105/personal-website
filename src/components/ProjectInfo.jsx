@@ -7,8 +7,6 @@ import projectImg from '../assets/project-img1.png';
 // Responsive image tag/loading
 
 const ProjectInfo = () => {
-  // Name, description, github and demo link
-  // E-commerce store that sells bodybuilding supplements.
   return (
     <div className="project-card">
       <a

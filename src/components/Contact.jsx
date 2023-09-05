@@ -1,13 +1,12 @@
 // TO DO LIST :
 // Customer validation (Error & successful message)
-// Put info in database once submitted
-// Email when submit form
 
 const Contact = () => {
   return (
     <section id="contact-container">
       <h2 id="contact">Contact Me</h2>
-      <form className="form-container">
+      <form className="contact-form" method="post">
+        <input type="hidden" name="form-name" value="contact-form" />
         <div className="name">
           <label htmlFor="visitor-name" className="form-label">
             Name
@@ -15,6 +14,7 @@ const Contact = () => {
           <input
             type="text"
             id="visitor-name"
+            name="name"
             className="input"
             placeholder="Your name..."
             required
@@ -27,6 +27,7 @@ const Contact = () => {
           <input
             type="email"
             id="visitor-email"
+            name="email"
             className="input"
             placeholder="Your email..."
             required
@@ -39,6 +40,7 @@ const Contact = () => {
           <input
             type="text"
             id="subject"
+            name="subject"
             className="input"
             placeholder="Your Subject..."
             required
@@ -50,6 +52,7 @@ const Contact = () => {
           </label>
           <textarea
             id="message"
+            name="message"
             className="input-area"
             rows={4}
             placeholder="Your message..."

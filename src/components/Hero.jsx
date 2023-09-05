@@ -1,12 +1,8 @@
-// import HandWave from '../assets/waving-hand.svg';
-
-// TO DO
-// Consider use JS package for typewriter effect
 import Typewriter from 'typewriter-effect';
 
 const Hero = () => {
   const loadResume = () => {
-    window.open('./src/assets/FakeResume.pdf', '_blank');
+    window.open('./src/assets/NQW_Resume.pdf', '_blank');
   };
 
   return (

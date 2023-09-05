@@ -1,6 +1,3 @@
-// TO DO LIST :
-// Find cleaner method to iterate the codes
-
 const TechStacks = () => {
   const languages = [
     'devicon-html5-plain-wordmark colored',
@@ -34,13 +31,6 @@ const TechStacks = () => {
             </li>
           ))}
         </ul>
-        {/* <ul className="language-list">
-          {languages.map((language) => (
-            <li key={language} className="language">
-              <i className={language}></i>
-            </li>
-          ))}
-        </ul> */}
       </div>
     </aside>
   );
