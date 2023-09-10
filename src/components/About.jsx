@@ -7,7 +7,7 @@ const About = () => {
       <article>
         Hi, my name is Keith. I&apos;m a self-taught developer with a background
         in chemical engineering. Out of curiosity, I began learning programming
-        as I had always had always enjoyed solving problems and building things
+        as I had always enjoyed solving problems and building things
       </article>
       <p>Tech stacks that I had worked with :</p>
       <TechStacks />

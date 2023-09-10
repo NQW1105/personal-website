@@ -88,10 +88,11 @@
       font-size: 1.1rem;
       color: $white;
       text-decoration: none;
-      margin: 0 0.8rem;
+      margin: 0.5rem 0.8rem;
       padding: 6px 10px;
       border: 2px solid $nav-text;
       background-color: $nav-text;
+      display: inline-block;
 
       &:hover {
         color: $nav-text;
