@@ -1,8 +1,16 @@
-# React + Vite
+# NQW Portfolio Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my portfolio site, which I've hosted on Netlify.
 
-Currently, two official plugins are available:
+It provides a brief introduction on my background and showcases the projects I've built during my self-taught journey. I'm continually learning and striving to improve my skills as a developer, so I'll be regularly updating the site.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live Site : [https://keithnqw.netlify.app/](https://keithnqw.netlify.app/)
+
+## Features
+
+- Responsive web design (Mobile first approach)
+- Simple CSS Animation
+- Netlify form as email notification
+<!--  Observation API to style nav links upon headings intersection  -->
+
+Feel free to contact me or provide your feedback 🙂
